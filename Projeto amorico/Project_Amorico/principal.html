@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nosso Amor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body, html {
+      height: 100%;
+      background-color: #000;
+      overflow: hidden;
+    }
+    .container {
+      height: 100vh;
+      width: 100vw;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      border: 8px solid;
+      border-image: linear-gradient(45deg, #ff0080, #7928ca, #00bfff, #00ff80) 1;
+      animation: bordaAnimada 5s linear infinite;
+      background: radial-gradient(circle at top left, #1a1a1a, #000);
+    }
+
+    @keyframes bordaAnimada {
+      0% {
+        border-image-source: linear-gradient(45deg, #ff0080, #7928ca, #00bfff, #00ff80);
+      }
+      25% {
+        border-image-source: linear-gradient(45deg, #00ff80, #00bfff, #7928ca, #ff0080);
+      }
+      50% {
+        border-image-source: linear-gradient(45deg, #7928ca, #ff0080, #00ff80, #00bfff);
+      }
+      75% {
+        border-image-source: linear-gradient(45deg, #00bfff, #00ff80, #ff0080, #7928ca);
+      }
+      100% {
+        border-image-source: linear-gradient(45deg, #ff0080, #7928ca, #00bfff, #00ff80);
+      }
+    }
+
+    .spotify {
+      width: 100%;
+      max-width: 360px;
+      height: 80px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #ff69b4;
+    }
+
+    .celular {
+      background: #111;
+      border-radius: 30px;
+      padding: 15px;
+      width: 95vw;
+      max-width: 370px;
+      box-shadow: 0 0 30px #ff00aa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .carrossel {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      width: 100%;
+      height: 340px;
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .carrossel img {
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      scroll-snap-align: center;
+      border-radius: 20px;
+      border: 4px solid #ff69b4;
+      box-shadow: 0 0 20px #ff69b4;
+      margin-right: 10px;
+    }
+
+    .carrossel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .indicadores {
+      display: flex;
+      justify-content: center;
+      margin: 12px 0;
+      gap: 10px;
+    }
+
+    .bolinha {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #555;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .bolinha.ativa {
+      background-color: #ff69b4;
+      transform: scale(1.3);
+    }
+
+    .eu-te-amo {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+      text-shadow: 0 0 5px #ff69b4;
+    }
+
+    .data-namoro {
+      color: #ff69b4;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 8px;
+      text-shadow: 0 0 8px #ff69b4;
+    }
+
+    .texto-romantico {
+      color: #ffb6c1;
+      font-size: 1.3rem;
+      text-align: center;
+      padding: -1000px;
+      line-height: 1.6em;
+      max-width: 90%;
+      text-shadow: 0 0 10px #ff69b4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Spotify -->
+    <div class="spotify">
+      <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/3HMY0r2BAdpasXMY8rseR0?utm_source=generator"
+        width="100%"
+        height="80"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- as tuas fotos aqui -->
+    <div class="celular">
+      <div class="carrossel" id="carrossel">
+        <img src="./meu amor e eo/dois nerdola vtmnc.jpg" alt="Foto 1" />
+        <img src="./meu amor e eo/eo e ela.jpg" alt="Foto 2" />
+        <img src="./meu amor e eo/eo e ela mais uma vez.jpg" alt="Foto 3" />
+        <img src="./meu amor e eo/nois.jpg" alt="Foto 4" />
+        <img src="./meu amor e eo/nois denovo.jpg" alt="Foto 5" />
+        <img src="./meu amor e eo/nois denovo.jpg" alt="Foto 6" />
+        <img src="./meu amor e eo/its mario.jpg" alt="Foto 7" />
+        <img src="./meu amor e eo/ó nois.jpg" alt="Foto 8" />
+        <img src="./meu amor e eo/ela é gata dms slk.jpg" alt="Foto 9" />
+        <img src="./meu amor e eo/bruh.jpg" alt="Foto 10" />
+      </div>
+      <div class="indicadores" id="indicadores">
+        <div class="bolinha ativa"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+      </div>
+      <div class="eu-te-amo">Eu te amo mil milhões❤️</div>
+    </div>
+
+    <!-- Mensagem com data importante -->
+    <div class="data-namoro">
+      💍♥️ 03/08/2024 - Nosso começor♥️💍
+    </div>
+
+    <!-- Texto de mensagens de amor -->
+    <div class="texto-romantico">
+      Cada segundo com você é como ouvir a nossa música preferida. Você é o meu tudo, minha paz, meu lar. <br />
+      Te amo mais do que palavras podem dizer e nunca vou poder voltar o carinho e a paixão que você me deu. Obrigado por me acolher e me amar, me aguentar e me abraçar toda vez que algo ruim acontece. Eu te amo mais do tudo nesse mundo.💖
+    </div>
+  </div>
+
+  <script>
+    const carrossel = document.getElementById('carrossel');
+    const indicadores = document.getElementById('indicadores').children;
+    let index = 0;
+    let total = carrossel.children.length;
+
+    function atualizarIndicador() {
+      for (let i = 0; i < indicadores.length; i++) {
+        indicadores[i].classList.remove('ativa');
+      }
+      indicadores[index]?.classList.add('ativa');
+    }
+
+    function centralizarImagem() {
+      const larguraImagem = carrossel.clientWidth;
+      carrossel.scrollTo({
+        left: larguraImagem * index,
+        behavior: 'smooth',
+      });
+    }
+
+    carrossel.addEventListener('scroll', () => {
+      let novoIndex = Math.round(carrossel.scrollLeft / carrossel.clientWidth);
+      if (novoIndex !== index) {
+        index = novoIndex;
+        atualizarIndicador();
+      }
+    });
+
+    setInterval(() => {
+      index = (index + 1) % total;
+      centralizarImagem();
+      atualizarIndicador();
+    }, 5000);
+  </script>
+</body>
+</html>

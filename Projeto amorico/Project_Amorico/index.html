@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nosso Amor - Bem-vindo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body, html {
+      height: 100%;
+      background: radial-gradient(circle at top left, #1a1a1a, #000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: #ff69b4;
+      text-shadow: 0 0 10px #ff69b4;
+      flex-direction: column;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    button {
+      background: linear-gradient(45deg, #ff0080, #7928ca, #00bfff, #00ff80);
+      border: none;
+      border-radius: 30px;
+      padding: 20px 50px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 20px #ff69b4;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px #ff69b4;
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nosso Amor</h1>
+  <button id="entrarBtn">CLIQUE AQUI</button>
+  <footer>💍♥️COM AMOR: DE GABBE PARA TU♥️💍</footer>
+
+  <script>
+    document.getElementById('entrarBtn').addEventListener('click', () => {
+      window.location.href = 'principal.html';
+    });
+  </script>
+</body>
+</html>

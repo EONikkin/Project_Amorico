@@ -1,0 +1,162 @@
+/*feito por jovemlobo & Fernando*/
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  body, html {
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+  }
+
+  .container {
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 8px solid;
+    border-image: linear-gradient(45deg, #ff0080, #7928ca, #00bfff, #00ff80) 1;
+    animation: bordaAnimada 5s linear infinite;
+    background: radial-gradient(circle at top left, #1a1a1a, #000);
+  }
+
+  @keyframes bordaAnimada {
+    0% { border-image-source: linear-gradient(45deg, #ff0080, #7928ca, #00bfff, #00ff80); }
+    25% { border-image-source: linear-gradient(45deg, #00ff80, #00bfff, #7928ca, #ff0080); }
+    50% { border-image-source: linear-gradient(45deg, #7928ca, #ff0080, #00ff80, #00bfff); }
+    75% { border-image-source: linear-gradient(45deg, #00bfff, #00ff80, #ff0080, #7928ca); }
+    100% { border-image-source: linear-gradient(45deg, #ff0080, #7928ca, #00bfff, #00ff80); }
+  }
+
+  /* 🎵 Animação Spotify */
+  .spotify {
+    width: 100%;
+    max-width: 360px;
+    height: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ff69b4;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInTop 1s ease-out forwards;
+  }
+
+  /* 📅 Data e texto animado */
+  .data-namoro {
+    color: #ff69b4;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+    text-shadow: 0 0 8px #ff69b4;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1.2s;
+  }
+
+  .texto-romantico {
+    color: #ffb6c1;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 15px;
+    line-height: 1.6em;
+    max-width: 90%;
+    text-shadow: 0 0 10px #ff69b4;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1.6s;
+  }
+
+  /* Moldura do celular */
+  .celular {
+    background: #111;
+    border-radius: 30px;
+    padding: 15px;
+    width: 95vw;
+    max-width: 370px;
+    box-shadow: 0 0 30px #ff00aa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carrossel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 340px;
+    border-radius: 20px;
+    position: relative;
+  }
+
+  .carrossel img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+    border-radius: 20px;
+    border: 4px solid #ff69b4;
+    box-shadow: 0 0 20px #ff69b4;
+    margin-right: 10px;
+  }
+
+  .carrossel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .indicadores {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0;
+    gap: 10px;
+  }
+
+  .bolinha {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #555;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .bolinha.ativa {
+    background-color: #ff69b4;
+    transform: scale(1.3);
+  }
+
+  .eu-te-amo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+    text-shadow: 0 0 5px #ff69b4;
+  }
+
+  /* Keyframes de animação */
+  @keyframes fadeInTop {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
